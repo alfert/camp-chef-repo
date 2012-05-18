@@ -24,6 +24,7 @@ cookbook 'subversion'
 cookbook 'memcached'
 cookbook 'aws'
 cookbook 'elasticsearch'
+cookbook 'chef-client'
 
 # Cloned and Patched Community Cookbooks
 cookbook 'postgresql',
