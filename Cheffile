@@ -25,6 +25,8 @@ cookbook 'memcached'
 cookbook 'aws'
 cookbook 'elasticsearch'
 cookbook 'chef-client'
+cookbook 'jetty'
+
 
 # Cloned and Patched Community Cookbooks
 cookbook 'postgresql',
