@@ -1,10 +1,25 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
+    apache2 (1.1.8)
     apt (1.4.2)
+    aws (0.99.1)
     bluepill (1.0.4)
     build-essential (1.0.0)
+    chef_handler (1.0.6)
+    elasticsearch (0.1.0)
+      bluepill (>= 0)
+      java (>= 0)
+    git (0.10.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    gunicorn (1.0.0)
+      python (>= 0)
     java (1.5.0)
+    memcached (1.0.2)
+      runit (>= 0.0.0)
+    mysql (1.2.4)
+      openssl (>= 0.0.0)
     nginx (0.101.2)
       bluepill (>= 0.0.0)
       build-essential (>= 0.0.0)
@@ -13,14 +28,93 @@ SITE
     ntp (1.1.8)
     ohai (1.0.2)
     openssl (1.0.0)
+    passenger_apache2 (0.99.4)
+      apache2 (>= 1.0.4)
+      build-essential (>= 0.0.0)
+    php (1.0.2)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+    python (1.0.6)
+      build-essential (>= 0.0.0)
+    runit (0.15.0)
+    subversion (1.0.0)
+      apache2 (>= 0.0.0)
+      windows (>= 0.0.0)
+    unicorn (1.0.0)
+    windows (1.2.12)
+      chef_handler (>= 0.0.0)
+    xfs (1.0.0)
+    xml (1.0.2)
+    yum (0.5.2)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/application.git
+  ref: master
+  sha: 016e9d0491b3d9645b62553e73ceca75b3ac90ed
+  specs:
+    application (0.99.15)
+      apache2 (>= 0.0.0)
+      gunicorn (>= 0.0.0)
+      passenger_apache2 (>= 0.0.0)
+      php (>= 0.0.0)
+      python (>= 1.0.6)
+      runit (>= 0.0.0)
+      tomcat (>= 0.0.0)
+      unicorn (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/application_java.git
+  ref: master
+  sha: fe4f2c4d182615d6c285398f04e77c1caf1d2288
+  specs:
+    application_java (0.0.1)
+      application (>= 0.0.0)
+      java (>= 0.0.0)
+      tomcat (>= 0.0.0)
+
+GIT
+  remote: https://github.com/tknerr/vagrant-ohai.git
+  ref: master
+  sha: 7c8cc0475a1ac74f4c2b683a7627c086dd36429d
+  specs:
+    vagrant-ohai (1.0.0)
+
+PATH
+  remote: ../cloned-cookbooks/database/
+  specs:
+    database (1.2.0)
+      aws (>= 0.0.0)
+      mysql (>= 1.2.0)
+      postgresql (>= 0.0.0)
+      xfs (>= 0.0.0)
+
+PATH
+  remote: ../cloned-cookbooks/postgresql/
+  specs:
     postgresql (0.99.4)
       openssl (>= 0.0.0)
-    runit (0.15.0)
+
+PATH
+  remote: ../cloned-cookbooks/tomcat/
+  specs:
+    tomcat (0.10.4)
+      java (>= 0.0.0)
 
 DEPENDENCIES
+  application (>= 0)
+  application_java (>= 0)
   apt (>= 0)
+  aws (>= 0)
+  database (>= 0)
+  elasticsearch (>= 0)
+  git (>= 0)
   java (>= 0)
+  memcached (>= 0)
   nginx (>= 0)
   ntp (>= 0)
   postgresql (>= 0)
+  subversion (>= 0)
+  tomcat (>= 0)
+  vagrant-ohai (>= 0)
 
