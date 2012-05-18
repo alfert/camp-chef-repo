@@ -14,10 +14,35 @@ site 'http://community.opscode.com/api/v1'
 #   :git => 'https://github.com/findsyou/cookbooks',
 #   :ref => 'postgresql-improvements'
 
-cookbook 'apt'
-# cookbook 'vagrant-ohai'
+# Standard Community Cookbooks 
+cookbook 'apt'  
 cookbook 'ntp'
-
 cookbook 'java'
-cookbook 'postgresql'
 cookbook 'nginx'
+cookbook 'git'
+cookbook 'subversion'
+cookbook 'memcached'
+cookbook 'aws'
+cookbook 'elasticsearch'
+
+# Cloned and Patched Community Cookbooks
+cookbook 'postgresql',
+	:path => '../cloned-cookbooks/postgresql/'
+cookbook 'database',
+	:path => '../cloned-cookbooks/database/'
+cookbook 'tomcat', # eventuell 7er
+	:path => '../cloned-cookbooks/tomcat/'
+
+# Not yet published cookbooks available via git
+cookbook 'application_java',
+	:git => 'https://github.com/opscode-cookbooks/application_java.git'
+cookbook 'application',
+	:git => 'https://github.com/opscode-cookbooks/application.git'
+cookbook 'vagrant-ohai',
+	:git => 'https://github.com/tknerr/vagrant-ohai.git'
+
+
+
+# cookbook 'ruby' # 1.9er
+
+
