@@ -1,3 +1,5 @@
 .rake_test_cache
-/tmp
-/cookbooks
+# tmp is used by librarian-chef
+tmp
+# Cookbooks are managed via librarian-chef
+cookbooks
