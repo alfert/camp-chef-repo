@@ -44,7 +44,9 @@ cookbook 'application',
 cookbook 'vagrant-ohai',
 	:git => 'https://github.com/tknerr/vagrant-ohai.git'
 
-
+# Eigene Cookbooks
+cookbook 'zeg-base',
+	:path => "../my-cookbooks/zeg-base"
 
 # cookbook 'ruby' # 1.9er
 

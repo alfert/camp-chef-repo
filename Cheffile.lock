@@ -107,6 +107,11 @@ PATH
     tomcat (0.10.4)
       java (>= 0.0.0)
 
+PATH
+  remote: ../my-cookbooks/zeg-base
+  specs:
+    zeg-base (0.0.1)
+
 DEPENDENCIES
   application (>= 0)
   application_java (>= 0)
@@ -125,4 +130,5 @@ DEPENDENCIES
   subversion (>= 0)
   tomcat (>= 0)
   vagrant-ohai (>= 0)
+  zeg-base (>= 0)
 
