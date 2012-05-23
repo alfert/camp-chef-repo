@@ -108,6 +108,19 @@ PATH
       java (>= 0.0.0)
 
 PATH
+  remote: ../my-cookbooks/camp-pg-demo-chef
+  specs:
+    camp-pg-demo-chef (0.0.1)
+      database (>= 0.0.0)
+      postgresql (>= 0.0.0)
+
+PATH
+  remote: ../my-cookbooks/pgpool2
+  specs:
+    pgpool2 (0.0.1)
+      postgresql (>= 0.0.0)
+
+PATH
   remote: ../my-cookbooks/zeg-base
   specs:
     zeg-base (0.0.1)
@@ -117,6 +130,7 @@ DEPENDENCIES
   application_java (>= 0)
   apt (>= 0)
   aws (>= 0)
+  camp-pg-demo-chef (>= 0)
   chef-client (>= 0)
   database (>= 0)
   elasticsearch (>= 0)
@@ -126,6 +140,7 @@ DEPENDENCIES
   memcached (>= 0)
   nginx (>= 0)
   ntp (>= 0)
+  pgpool2 (>= 0)
   postgresql (>= 0)
   subversion (>= 0)
   tomcat (>= 0)

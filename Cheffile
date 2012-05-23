@@ -48,6 +48,12 @@ cookbook 'vagrant-ohai',
 cookbook 'zeg-base',
 	:path => "../my-cookbooks/zeg-base"
 
+cookbook 'camp-pg-demo-chef',
+	:path => "../my-cookbooks/camp-pg-demo-chef"
+
+cookbook 'pgpool2',
+	:path => "../my-cookbooks/pgpool2"
+
 # cookbook 'ruby' # 1.9er
 
 
